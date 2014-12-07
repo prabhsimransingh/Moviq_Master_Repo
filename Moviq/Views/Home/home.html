@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
     <title>Moviq</title>
 <!--    <link rel="shortcut icon" href="../favicon.ico">-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
@@ -61,10 +64,13 @@
     @Partial['../templates/book-details.html']
     @Partial['../templates/login.html']
     @Partial['../templates/register.html']
+    @Partial['../templates/pay.html']
+    @Partial['../templates/pay-success.html']
     
     <!-- /templates -->
     
     <!-- js -->
+   
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js"></script>
     <script src="/js/lib/sammy.min.js"></script>
