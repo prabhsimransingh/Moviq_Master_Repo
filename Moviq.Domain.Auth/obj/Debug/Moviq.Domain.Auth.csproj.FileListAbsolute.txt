@@ -49,7 +49,6 @@ C:\Code\V1.5\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Newtonsoft.Json.xml
 C:\Code\V1.5\Moviq_Master_Repo\Moviq.Domain.Auth\obj\Debug\Moviq.Domain.Auth.csprojResolveAssemblyReference.cache
 C:\Code\V1.5\Moviq_Master_Repo\Moviq.Domain.Auth\obj\Debug\Moviq.Domain.Auth.dll
 C:\Code\V1.5\Moviq_Master_Repo\Moviq.Domain.Auth\obj\Debug\Moviq.Domain.Auth.pdb
-<<<<<<< HEAD
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Moviq.Domain.Auth.dll
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Moviq.Domain.Auth.pdb
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Couchbase.dll
@@ -84,5 +83,3 @@ C:\dev_git\NewestFork\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Newtonsoft.J
 C:\dev_git\NewestFork\Moviq_Master_Repo\Moviq.Domain.Auth\obj\Debug\Moviq.Domain.Auth.csprojResolveAssemblyReference.cache
 C:\dev_git\NewestFork\Moviq_Master_Repo\Moviq.Domain.Auth\obj\Debug\Moviq.Domain.Auth.dll
 C:\dev_git\NewestFork\Moviq_Master_Repo\Moviq.Domain.Auth\obj\Debug\Moviq.Domain.Auth.pdb
-=======
->>>>>>> develop
