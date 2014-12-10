@@ -1,14 +1,4 @@
-﻿<script id="t-cart-empty" type="text/html">
-
-    <div class="error-component">
-        <div class="error-detail">
-           Cart is Empty
-        </div>
-    </div>
-
-</script>
-
-.cart-component .thumbnail {
+﻿.cart-component .thumbnail {
     height: 180px;
     width: 80%;
 }
@@ -76,3 +66,6 @@
 .btn-add-to-cart {
     margin-right:100px;
 }
+
+
+

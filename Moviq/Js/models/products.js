@@ -37,15 +37,13 @@ define('models/products', { init: function (ko, Product) {
             for (i; i < products.length; i++) {
                 $this.addProduct(products[i]);
             }
-        };
-        
-        
+        };       
         
         if (products) {
             $this.addProducts(products);            
         }
 
-        // ***** My Code ******/
+        // ***** My Code******/
         $this.totalProducts = ko.computed(function () {
             var total = 0;
             $.each($this.products(), function () { total += 1; });            
