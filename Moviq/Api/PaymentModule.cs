@@ -9,7 +9,7 @@ namespace Moviq.Api
 
     public class PaymentModule : NancyModule
     {
-        public PaymentModule(IProductDomain products, IModuleHelpers helper)
+        public PaymentModule(IModuleHelpers helper)
         {
             this.Get["/api/payment", true] = async (args, cancellationToken) =>
             {
