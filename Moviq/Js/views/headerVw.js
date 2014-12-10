@@ -1,6 +1,7 @@
 /**/
 
 /*global define*/
+
 define('views/headerVw', {
     init: function ($, routes) {
         "use strict";
@@ -71,3 +72,4 @@ define('views/headerVw', {
         $('span.close').click(function () { $(hiddenSection).fadeOut(); });
     }
 });
+
