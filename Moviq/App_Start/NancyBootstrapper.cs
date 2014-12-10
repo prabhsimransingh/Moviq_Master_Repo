@@ -83,6 +83,24 @@
             container.Register<IUserMapper, UserMapper>();
             container.Register<IUserValidator, UserValidator>();
             container.Register<IUserProfileService, UserProfileService>().AsMultiInstance();
+
+
+            container.Register<IFactory<ICartItem>, CartFactory>();
+            container.Register<ICartRepository>((cntr, namedParams) =>
+            {
+                return new CartRepository(
+                    container.Resolve<ICouchbaseClient>(),
+                    container.Resolve<IFactory<ICartItem>>(),
+                    container.Resolve<ILocale>(),
+                    "http://localhost:9200/moviq/_search");
+            });
+
+
+            container.Register<IRepository<ICartItem>>((cntr, namedParams) =>
+            {
+                return container.Resolve<ICartRepository>();
+            });
+            container.Register<ICartItemServices, CartItemServices>().AsMultiInstance();
         }
 
         protected override void ConfigureRequestContainer(TinyIoCContainer container, NancyContext context)
