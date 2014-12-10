@@ -11,6 +11,7 @@ define('models/product', { init: function (ko) {
         var $this = this;
         
         $this.setProductData = function (product, productData) {
+            
             if (!product) {
                 throw new Error('cannot extend the properties of undefined');
             }
@@ -35,10 +36,11 @@ define('models/product', { init: function (ko) {
             
             // Ensure updates no more than once per 50-millisecond period
             product.thumbnailAlt.extend({ rateLimit: 50 });
-            product.detailsLink.extend({ rateLimit: 50 });
+            product.detailsLink.extend({ rateLimit: 50 });            
         };
         
         if (product) {
+            
             $this.setProductData($this, product);
         }
     };
