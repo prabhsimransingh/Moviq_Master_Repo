@@ -49,6 +49,7 @@ C:\Code\V1.5\Moviq_Master_Repo\Moviq.Domain.Products\bin\Debug\RestSharp.xml
 C:\Code\V1.5\Moviq_Master_Repo\Moviq.Domain.Products\obj\Debug\Moviq.Domain.Products.csprojResolveAssemblyReference.cache
 C:\Code\V1.5\Moviq_Master_Repo\Moviq.Domain.Products\obj\Debug\Moviq.Domain.Products.dll
 C:\Code\V1.5\Moviq_Master_Repo\Moviq.Domain.Products\obj\Debug\Moviq.Domain.Products.pdb
+<<<<<<< HEAD
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Domain.Products\bin\Debug\Couchbase.dll
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Domain.Products\bin\Debug\Enyim.Caching.dll
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Domain.Products\bin\Debug\Grain.dll
@@ -83,3 +84,5 @@ C:\dev_git\NewestFork\Moviq_Master_Repo\Moviq.Domain.Products\bin\Debug\RestShar
 C:\dev_git\NewestFork\Moviq_Master_Repo\Moviq.Domain.Products\obj\Debug\Moviq.Domain.Products.csprojResolveAssemblyReference.cache
 C:\dev_git\NewestFork\Moviq_Master_Repo\Moviq.Domain.Products\obj\Debug\Moviq.Domain.Products.dll
 C:\dev_git\NewestFork\Moviq_Master_Repo\Moviq.Domain.Products\obj\Debug\Moviq.Domain.Products.pdb
+=======
+>>>>>>> develop
