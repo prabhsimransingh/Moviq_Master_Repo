@@ -39,9 +39,24 @@ define('models/products', { init: function (ko, Product) {
             }
         };
         
+        
+        
         if (products) {
-            $this.addProducts(products);
+            $this.addProducts(products);            
         }
+
+        // ***** My Code ******/
+        $this.totalProducts = ko.computed(function () {
+            var total = 0;
+            $.each($this.products(), function () { total += 1; });            
+            return total;
+        });
+        $this.totalCosts = ko.computed(function () {
+            var total = 0;
+            $.each($this.products(), function () { total += parseFloat("0" + this.price(), 10); });            
+            return total.toFixed(2);
+        });
+        // ********************* 
     };
     
     return Products;

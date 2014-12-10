@@ -1,0 +1,47 @@
+﻿<script id="t-pay" type="text/html">
+
+    <h1>Payment Page</h1>
+
+    <form class="payform" data-bind="with: data">
+        <h2>Enter Card details to proceed with payment of
+        <span id="totalcost" data-bind="text: totalcost"></span> </h2>
+        <div class="form-row">
+            <label for="name" class="stripeLabel">Your Name</label>
+            <input type="text" name="name" class="required" value="Prabh" />
+        </div>
+
+        <div class="form-row">
+            <label for="email">E-mail Address</label>
+            <input type="text" name="email" class="email required" value="prabhsis@andrew.cmu.edu" />
+        </div>
+
+        <div class="form-row">
+            <label>Card Number</label>
+            <input type="text" maxlength="20" autocomplete="off" class="card-number stripe-sensitive required" value="4242424242424242" />
+        </div>
+
+        <div class="form-row">
+            <label>CVC</label>
+            <input type="text" maxlength="4" autocomplete="off" class="card-cvc stripe-sensitive required" value="123" />
+        </div>
+
+        <div class="form-row">
+            <label>Expiration</label>
+            <div class="expiry-wrapper">
+
+                <select class="card-expiry-month stripe-sensitive required" name="expiration">
+                    <option value="1" selected>1</option>
+                </select>
+                <span> / </span>
+                <select class="card-expiry-year stripe-sensitive required" name="expiration">
+                    <option value="2016" selected>2016</option>
+                </select>
+
+            </div>
+
+            <input type="button" name="submit-button" class="submit-button" value="submit">
+        </div>
+        <span class="payment-errors"></span>
+    </form>
+
+</script>
