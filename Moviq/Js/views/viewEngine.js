@@ -12,6 +12,7 @@ define('views/viewEngine', { init: function ($, ko) {
         var self = {};
         
         self.home = { text: 'Moviq', path: '/' };
+        
         self.links = [];
         self.cartCount = ko.observable();
         self.showCartCount = ko.computed(function () {
