@@ -3,3 +3,8 @@ C:\dev_git\Heinz95729\Moviq.Interfaces\bin\Debug\Moviq.Interfaces.pdb
 C:\dev_git\Heinz95729\Moviq.Interfaces\obj\Debug\Moviq.Interfaces.csprojResolveAssemblyReference.cache
 C:\dev_git\Heinz95729\Moviq.Interfaces\obj\Debug\Moviq.Interfaces.dll
 C:\dev_git\Heinz95729\Moviq.Interfaces\obj\Debug\Moviq.Interfaces.pdb
+C:\Moviq_Master_Repo\Moviq.Interfaces\bin\Debug\Moviq.Interfaces.dll
+C:\Moviq_Master_Repo\Moviq.Interfaces\bin\Debug\Moviq.Interfaces.pdb
+C:\Moviq_Master_Repo\Moviq.Interfaces\obj\Debug\Moviq.Interfaces.csprojResolveAssemblyReference.cache
+C:\Moviq_Master_Repo\Moviq.Interfaces\obj\Debug\Moviq.Interfaces.dll
+C:\Moviq_Master_Repo\Moviq.Interfaces\obj\Debug\Moviq.Interfaces.pdb

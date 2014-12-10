@@ -7,3 +7,12 @@ C:\dev_git\Heinz95729\Moviq.Locale\bin\Debug\Newtonsoft.Json.xml
 C:\dev_git\Heinz95729\Moviq.Locale\obj\Debug\Moviq.Locale.csprojResolveAssemblyReference.cache
 C:\dev_git\Heinz95729\Moviq.Locale\obj\Debug\Moviq.Locale.dll
 C:\dev_git\Heinz95729\Moviq.Locale\obj\Debug\Moviq.Locale.pdb
+C:\Moviq_Master_Repo\Moviq.Locale\bin\Debug\Moviq.Locale.dll
+C:\Moviq_Master_Repo\Moviq.Locale\bin\Debug\Moviq.Locale.pdb
+C:\Moviq_Master_Repo\Moviq.Locale\bin\Debug\Moviq.Interfaces.dll
+C:\Moviq_Master_Repo\Moviq.Locale\bin\Debug\Newtonsoft.Json.dll
+C:\Moviq_Master_Repo\Moviq.Locale\bin\Debug\Moviq.Interfaces.pdb
+C:\Moviq_Master_Repo\Moviq.Locale\bin\Debug\Newtonsoft.Json.xml
+C:\Moviq_Master_Repo\Moviq.Locale\obj\Debug\Moviq.Locale.csprojResolveAssemblyReference.cache
+C:\Moviq_Master_Repo\Moviq.Locale\obj\Debug\Moviq.Locale.dll
+C:\Moviq_Master_Repo\Moviq.Locale\obj\Debug\Moviq.Locale.pdb
