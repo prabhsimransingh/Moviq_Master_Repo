@@ -1,0 +1,131 @@
+﻿.cart-component .thumbnail {
+    height: 180px;
+    width: 80%;
+}
+
+.cart-component .thumbnail-a {
+    float: left;
+}
+
+.cart-component .thumbnail-img img {
+    max-height: 170px;
+    max-width: 250px;
+    margin: 0 10px 0 0;
+}
+
+.a-box-group {
+    box-sizing: border-box;
+    float: right;
+    width: 18%;
+}
+.a-color-alternate-background {
+    border-radius: 4px 4px 0 0;
+    margin-top: 0;
+    background-color: white;
+    border: 1px solid #ddd;    
+    display: block;
+    background-color: #f3f3f3 !important;    
+}
+.a-box-inner {
+    border-radius: 4px 4px 0 0;
+    padding: 15%;
+    position: relative
+}
+.a-box-group .cart-items {
+    margin-bottom: 6px !important;
+}
+.btn-product-price {
+    margin-top: 0.5%;
+    float: left;
+}
+
+.btn-remove-from-cart {
+    margin-top: 0.5%;
+    margin-left:92%;
+}
+.index-cart {
+    float: left; 
+    text-align: center; 
+    height: 100%;     
+    width: 7%;
+}
+.index-heading {
+    margin-top: 70%;
+}
+.a-color-success {
+    color: #090 !important;
+   
+}
+.a-alert-content {
+    margin-bottom:4%;
+}
+
+.proceed-to-cart {
+    margin-right:100px;
+}
+.btn-add-to-cart {
+    margin-right:100px;
+}
+.form-control {
+display:inline-block;
+width: 100%;
+height: 34px;
+padding: 6px 12px;
+font-size: 14px;
+line-height: 1.42857143;
+color: #555;
+background-color: #fff;
+background-image: none;
+border: 1px solid #ccc;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.card-holder-name {
+display:inline-block;
+}
+email
+{
+display:inline-block;
+}
+.lbl
+{
+display:inline-block;
+}
+.card-expiry-year {
+display:inline-block;
+width: 45%;
+}
+.card-cvc {
+width: 25%;
+}
+.card-number
+{
+display:inline-block;
+}
+.card-expiry-month {
+display:inline-block;
+width: 40%;
+}
+table {
+    width:30%;
+}
+.first
+{
+    width:40%;
+}
+.second
+{
+    width:60%;
+}
+td, th {
+padding: 5px;
+}
+.hide
+{
+    display:none;
+}
+
+/****/
