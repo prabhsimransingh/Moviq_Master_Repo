@@ -221,6 +221,10 @@
       <Project>{2de192c4-f87f-4b04-91b9-09ec1d125746}</Project>
       <Name>Moviq.Domain.Products</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Moviq.Domain.ShoppingCart\Moviq.Domain.ShoppingCart.csproj">
+      <Project>{d9ee553d-78db-4d91-9f80-ffaf97d7d6fa}</Project>
+      <Name>Moviq.Domain.ShoppingCart</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Moviq.Interfaces\Moviq.Interfaces.csproj">
       <Project>{b0708601-0cfa-411e-87b8-a9875aa00c9d}</Project>
       <Name>Moviq.Interfaces</Name>
