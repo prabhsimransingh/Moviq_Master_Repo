@@ -1,4 +1,4 @@
-<!-- Adapted From: http://tympanus.net/Development/AnimatedBooks/ -->
+
 <script id="t-book-details" type="text/html">
     <div class="book-component details" data-bind="with: data">
         <figure class='book'>
@@ -55,6 +55,9 @@
         </figure>
         <div class="purchase">
             <button class="btn btn-success btn-buy" data-bind="currency: book.price"></button>
+        </div>
+        <div class="btn-add-to-cart">
+            <button class="btn btn-success btn-buy btn-add-cart" data-bind="attr: {id: book.uid}">Add to Cart</button>
         </div>        
     </div>
 </script>

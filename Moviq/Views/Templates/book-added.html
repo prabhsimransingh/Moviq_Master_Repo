@@ -1,0 +1,68 @@
+﻿
+<script id="t-book-added" type="text/html">    
+    <div class="book-component details" data-bind="with: data">
+        <div class="a-alert-content">
+            <h2>
+                <span class="a-color-success" id="confirm-text" data-bind="text: message"></span>
+            </h2>
+        </div>
+        <figure class='book'>
+
+            <!-- Front -->
+
+            <ul class='hardcover_front'>
+                <li>
+                    <!-- ko if: book.thumbnailLink != null -->
+                    <img src="" alt="" data-bind="attr: { src: book.thumbnailLink, alt: book.thumbnailAlt }">
+                    <!-- /ko -->
+                    <!-- ko if: book.thumbnailLink == null -->
+                    <div class="coverDesign yellow">
+                        <!--
+                                                <span class="ribbon">NEW</span>
+                                                <h1>CSS</h1>
+                                                <p>TRANSFORM</p>
+                        -->
+                    </div>
+                    <!-- /ko -->
+                </li>
+                <li></li>
+            </ul>
+
+            <!-- Pages -->
+
+            <ul class='page'>
+                <li></li>
+                <li>
+                    <a class="btn" data-bind="href: book.detailsLink">READ MORE</a>
+                </li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <!-- Back -->
+
+            <ul class='hardcover_back'>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class='book_spine'>
+                <li></li>
+                <li></li>
+            </ul>
+            <figcaption>
+                <h1 data-bind="text: book.title"></h1>
+                <div data-bind="foreach: book.authors">
+                    <span data-bind="text: book.name"></span>
+                </div>
+                <div data-bind="html: book.description"></div>
+            </figcaption>
+        </figure>
+        <div class="book-added-price">
+            <button class="btn btn-success btn-buy" data-bind="currency: book.price"></button>
+        </div>
+        <div class="proceed-to-cart">
+            <button class="btn btn-success btn-buy btn-checkout">Proceed to checkout</button>
+        </div>                
+    </div>
+</script>
