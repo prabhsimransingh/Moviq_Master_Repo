@@ -18,7 +18,9 @@ define('controllers/cartController', { init: function (routes, viewEngine, Produ
     routes.get(/^\/#\/remove\/?/i, function (context) {
         removeFromCart(context);
     });
-    
+    routes.get(/^\/#\/makepayment/, function (context) {        
+        makePayment(context);
+    });
     routes.get('/', function (context) {       
     });
 
@@ -104,7 +106,9 @@ define('controllers/cartController', { init: function (routes, viewEngine, Produ
             proceedToCart(context);
         }        
     };
-   
+    makePayment = function (context) {      
+        
+    };
    return {
        addToCart: addToCart
    };

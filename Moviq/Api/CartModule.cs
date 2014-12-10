@@ -8,7 +8,7 @@
     {
         public CartModule(IProductDomain products, IModuleHelpers helper)
         {
-           
+
             this.Get["/api/cart/{uid}"] = args =>
             {
                 return helper.ToJson(products.Repo.Get(args.uid));

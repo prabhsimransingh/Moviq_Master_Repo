@@ -12,7 +12,9 @@
                         <h3><a data-bind="text: product.title, href: product.detailsLink"></a></h3>
                         <div class="description" data-bind="html: product.description"></div>
                         <div class="overlay"></div>
-                        <button>add to cart</button>                    
+                        <form action="/cntrollers/cartController" method="post" role="form">
+                            <button class="add" data-bind="attr:{id: product.uid}">add to cart</button>
+                        </form>                    
                         <a class="buy-now" href="javascript:void(0);" data-bind="currency: product.price"></a>
                     </div>
                 </div>
