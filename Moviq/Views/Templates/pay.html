@@ -3,43 +3,99 @@
     <h1>Payment Page</h1>
 
     <form class="payform" data-bind="with: data">
-        <h2>Enter Card details to proceed with payment of
-        <span id="totalcost" data-bind="text: totalcost"></span> </h2>
+        <h2>
+            Enter Card details to proceed with payment of $
+            <span id="totalcost" data-bind="text: totalcost"></span>
+        </h2>
         <div class="form-row">
-            <label for="name" class="stripeLabel">Your Name</label>
-            <input type="text" name="name" class="required" value="Prabh" />
+            <table>
+                <tr>
+                    <td class="first"><label for="name" class="stripeLabel card-holder-name lbl">Your Name</label></td>
+                    <td class="second"><input type="text" name="name" class="username form-control required" /></td>
+                </tr>
+            </table>
         </div>
 
         <div class="form-row">
-            <label for="email">E-mail Address</label>
-            <input type="text" name="email" class="email required" value="prabhsis@andrew.cmu.edu" />
+            <table>
+                <tr>
+                    <td class="first"><label for="email" class="lbl">E-mail Address</label></td>
+                    <td class="second"><input type="text" name="email" class="email form-control required" /></td>
+                </tr>
+            </table>
         </div>
 
         <div class="form-row">
-            <label>Card Number</label>
-            <input type="text" maxlength="20" autocomplete="off" class="card-number stripe-sensitive required" value="4242424242424242" />
+            <table>
+                <tr>
+                    <td class="first"><label class="lbl">Card Number</label></td>
+                    <td class="second"><input type="text" maxlength="20" autocomplete="off" class="card-number form-control stripe-sensitive required" /></td>
+                </tr>
+            </table>
+
         </div>
 
         <div class="form-row">
-            <label>CVC</label>
-            <input type="text" maxlength="4" autocomplete="off" class="card-cvc stripe-sensitive required" value="123" />
+            <table>
+                <tr>
+                    <td class="first"><label class="lbl">CVC</label></td>
+                    <td class="second"><input type="text" maxlength="4" autocomplete="off" class="card-cvc form-control stripe-sensitive required" /></td>
+                </tr>
+            </table>
         </div>
 
         <div class="form-row">
-            <label>Expiration</label>
             <div class="expiry-wrapper">
+                <table>
+                    <tr>
+                        <td class="first">
+                            <label class="lbl">Expiration</label>        
+                        </td>
+                        <td class="second">
+                            <select class="card-expiry-month stripe-sensitive form-control required" name="expiration">
+                                <option value="01" selected>1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                                <option value="06">6</option>
+                                <option value="07">7</option>
+                                <option value="08">8</option>
+                                <option value="09">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select><span> / </span>
+                            <select class="card-expiry-year stripe-sensitive form-control required" name="expiration">
+                                <option value="2015" selected>2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                                <option value="2031">2031</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
 
-                <select class="card-expiry-month stripe-sensitive required" name="expiration">
-                    <option value="1" selected>1</option>
-                </select>
-                <span> / </span>
-                <select class="card-expiry-year stripe-sensitive required" name="expiration">
-                    <option value="2016" selected>2016</option>
-                </select>
+
+
 
             </div>
-
-            <input type="button" name="submit-button" class="submit-button" value="submit">
+            <br />
+            <input type="button" name="submit-button" class="btn btn-success submit-button" value="Submit">
+            <a href="/#/checkout" class="btn btn-success gobackbutton hide">Go To Cart</a>
         </div>
         <span class="payment-errors"></span>
     </form>
