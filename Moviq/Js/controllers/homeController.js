@@ -4,6 +4,7 @@ define('controllers/homeController', { init: function (routes, viewEngine, Produ
     "use strict";
 
     var onSearch;
+    var addToCart;
     
     // GET /#/search/?q=searchterm
     // search for products
@@ -19,6 +20,20 @@ define('controllers/homeController', { init: function (routes, viewEngine, Produ
     });
 
     
+    routes.get(/^\/#\/addToCart\/?/i, function (context) {
+        //alert(2);
+        addToCart(context);
+    });
+
+    addToCart = function (context) {
+        return $.ajax({
+            url: '/api/addToCart/?q=' + context.params.id,
+            method: 'GET'
+        }).done(function (data) {
+           // alert("coming up");
+        });
+    };
+
 
     onSearch = function (context) {
         return $.ajax({
