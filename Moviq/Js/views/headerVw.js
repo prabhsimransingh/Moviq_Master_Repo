@@ -60,6 +60,17 @@ define('views/headerVw', {
             return false;
         });
 
+        $(document).on('click', ".add", function (event) {
+            alert(this.id);
+            routes.navigate('/addToCart/?id=' + this.id);
+            return false;
+        });
+
+        routes.get(/^\/#\/addToCart\/?/i, function (context) {
+           // alert(2);
+            addToCart(context);
+        });
+
         $(document).on('click', ".btn-remove-from-cart .btn", function (event) {
             routes.navigate('/remove/?uid=' + this.id);
             return false;

@@ -81,12 +81,10 @@
       <HintPath>..\packages\RestSharp.104.5.0\lib\net4\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Css\component.css" />
-    <Content Include="Css\custom.css" />
     <Content Include="Css\main.css" />
     <Content Include="Fonts\codropsicons\codropsicons.svg" />
     <Content Include="Fonts\codropsicons\license.txt" />
@@ -123,9 +121,7 @@
     <Content Include="Js\config.js" />
     <Content Include="Js\controllers\authController.js" />
     <Content Include="Js\controllers\booksController.js" />
-    <Content Include="Js\controllers\cartController.js" />
     <Content Include="Js\controllers\homeController.js" />
-    <Content Include="Js\controllers\paymentController.js" />
     <Content Include="Js\controllers\profileController.js" />
     <Content Include="Js\lib\grid.js" />
     <Content Include="Js\lib\ko.binders.js" />
@@ -176,13 +172,9 @@
     <Content Include="Views\Home\home.html" />
     <Content Include="Views\Templates\book-added.html" />
     <Content Include="Views\Templates\book-details.html" />
-    <Content Include="Views\Templates\cart-empty.html" />
     <Content Include="Views\Templates\cart-grid.html" />
     <Content Include="Views\Templates\error-404.html" />
-    <Content Include="Views\Templates\pay-fail.html" />
-    <Content Include="Views\Templates\pay-success.html" />
-    <Content Include="Views\Templates\pay.html" />
-    <Content Include="Views\Templates\payment.html" />
+    <Content Include="Views\Home\HtmlPage1.html" />
     <Content Include="Views\Templates\login.html" />
     <Content Include="Views\Templates\register.html" />
     <Content Include="Views\Templates\search-no-results.html" />
@@ -193,9 +185,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\BooksModule.cs" />
-    <Compile Include="Api\CartModule.cs" />
     <Compile Include="Api\ExampleSecureModule.cs" />
-    <Compile Include="Api\PaymentModule.cs" />
     <Compile Include="Api\SearchModule.cs" />
     <Compile Include="App_Start\NancyBootstrapper.cs" />
     <Compile Include="App_Start\OwinBootstrapper.cs" />
@@ -220,6 +210,10 @@
     <ProjectReference Include="..\Moviq.Domain.Products\Moviq.Domain.Products.csproj">
       <Project>{2de192c4-f87f-4b04-91b9-09ec1d125746}</Project>
       <Name>Moviq.Domain.Products</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Moviq.Domain.ShoppingCart\Moviq.Domain.ShoppingCart.csproj">
+      <Project>{d9ee553d-78db-4d91-9f80-ffaf97d7d6fa}</Project>
+      <Name>Moviq.Domain.ShoppingCart</Name>
     </ProjectReference>
     <ProjectReference Include="..\Moviq.Interfaces\Moviq.Interfaces.csproj">
       <Project>{b0708601-0cfa-411e-87b8-a9875aa00c9d}</Project>
