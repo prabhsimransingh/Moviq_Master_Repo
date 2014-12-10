@@ -1,9 +1,9 @@
-﻿<!-- Adapted From: http://tympanus.net/Development/AnimatedBooks/ -->
+﻿
 <script id="t-book-added" type="text/html">    
     <div class="book-component details" data-bind="with: data">
         <div class="a-alert-content">
             <h2>
-                <span class="a-color-success" id="confirm-text">1 item added to Cart</span>
+                <span class="a-color-success" id="confirm-text" data-bind="text: message"></span>
             </h2>
         </div>
         <figure class='book'>
@@ -58,11 +58,11 @@
                 <div data-bind="html: book.description"></div>
             </figcaption>
         </figure>
-        <div class="proceed-to-cart">
-            <button class="btn btn-success btn-buy btn-checkout">Proceed to checkout</button>
-        </div>
         <div class="book-added-price">
             <button class="btn btn-success btn-buy" data-bind="currency: book.price"></button>
-        </div>        
+        </div>
+        <div class="proceed-to-cart">
+            <button class="btn btn-success btn-buy btn-checkout">Proceed to checkout</button>
+        </div>                
     </div>
 </script>

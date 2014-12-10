@@ -13,7 +13,7 @@ define('controllers/homeController', { init: function (routes, viewEngine, Produ
     
     routes.get('/', function (context) {
         viewEngine.setView({
-            template: 'test.cshtml',
+            template: 't-empty',
             message: 'hello word!'
         });
     });
