@@ -14,6 +14,34 @@ define('views/headerVw', {
             return false;
         });
         $(document).on('click', '.submit-button', function (event) {
+          
+
+            
+            $(".payform").validate({
+                rules: {
+                    "username": {
+                        username: true,
+                        required: true
+                    },
+                    "email": {
+                        email: true,
+                        required: true
+                    },
+                    "card-cvc": {
+                        cardCVC: true,
+                        required: true
+                    },
+                    "card-number": {
+                        cardNumber: true,
+                        required: true
+                    },
+                    "card-expiry-year": "cardExpiry" // we don't validate month separately
+                }
+            });
+            if (!$(".payform").valid())
+            {
+                return false;
+            }      
             routes.navigate('/stripe/?totalcost=' + document.getElementById("totalcost").innerHTML);
             return false;
         });
