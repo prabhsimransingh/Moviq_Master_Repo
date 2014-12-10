@@ -39,8 +39,7 @@ define('models/product', { init: function (ko) {
             product.detailsLink.extend({ rateLimit: 50 });            
         };
         
-        if (product) {
-            
+        if (product) {            
             $this.setProductData($this, product);
         }
     };
