@@ -5,3 +5,10 @@ C:\dev_git\Heinz95729\Moviq.Interfaces.Tests\bin\Debug\Moviq.Interfaces.pdb
 C:\dev_git\Heinz95729\Moviq.Interfaces.Tests\obj\Debug\Moviq.Interfaces.Tests.csprojResolveAssemblyReference.cache
 C:\dev_git\Heinz95729\Moviq.Interfaces.Tests\obj\Debug\Moviq.Interfaces.Tests.dll
 C:\dev_git\Heinz95729\Moviq.Interfaces.Tests\obj\Debug\Moviq.Interfaces.Tests.pdb
+C:\dev_git\Moviq_Master_Repo\Moviq.Interfaces.Tests\bin\Debug\Moviq.Interfaces.Tests.dll
+C:\dev_git\Moviq_Master_Repo\Moviq.Interfaces.Tests\bin\Debug\Moviq.Interfaces.Tests.pdb
+C:\dev_git\Moviq_Master_Repo\Moviq.Interfaces.Tests\bin\Debug\Moviq.Interfaces.dll
+C:\dev_git\Moviq_Master_Repo\Moviq.Interfaces.Tests\bin\Debug\Moviq.Interfaces.pdb
+C:\dev_git\Moviq_Master_Repo\Moviq.Interfaces.Tests\obj\Debug\Moviq.Interfaces.Tests.csprojResolveAssemblyReference.cache
+C:\dev_git\Moviq_Master_Repo\Moviq.Interfaces.Tests\obj\Debug\Moviq.Interfaces.Tests.dll
+C:\dev_git\Moviq_Master_Repo\Moviq.Interfaces.Tests\obj\Debug\Moviq.Interfaces.Tests.pdb

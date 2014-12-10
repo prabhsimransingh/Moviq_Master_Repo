@@ -2,11 +2,12 @@
 
     <h1>Payment Page</h1>
 
-    <form class="exampleform">
-
+    <form class="payform" data-bind="with: data">
+        <h2>Enter Card details to proceed with payment of
+        <span id="totalcost" data-bind="text: totalcost"></span> </h2>
         <div class="form-row">
             <label for="name" class="stripeLabel">Your Name</label>
-            <input type="text" name="name" class="required" value="Prabh"/>
+            <input type="text" name="name" class="required" value="Prabh" />
         </div>
 
         <div class="form-row">
@@ -21,7 +22,7 @@
 
         <div class="form-row">
             <label>CVC</label>
-            <input type="text" maxlength="4" autocomplete="off" class="card-cvc stripe-sensitive required" value="123"/>
+            <input type="text" maxlength="4" autocomplete="off" class="card-cvc stripe-sensitive required" value="123" />
         </div>
 
         <div class="form-row">
@@ -38,8 +39,9 @@
 
             </div>
 
-            <button type="submit" name="submit-button">Submit</button>
-            <span class="payment-errors"></span>
+            <input type="button" name="submit-button" class="submit-button" value="submit">
+        </div>
+        <span class="payment-errors"></span>
     </form>
-    </div>
+
 </script>
