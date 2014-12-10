@@ -81,10 +81,12 @@
       <HintPath>..\packages\RestSharp.104.5.0\lib\net4\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Css\component.css" />
+    <Content Include="Css\custom.css" />
     <Content Include="Css\main.css" />
     <Content Include="Fonts\codropsicons\codropsicons.svg" />
     <Content Include="Fonts\codropsicons\license.txt" />
@@ -121,7 +123,9 @@
     <Content Include="Js\config.js" />
     <Content Include="Js\controllers\authController.js" />
     <Content Include="Js\controllers\booksController.js" />
+    <Content Include="Js\controllers\cartController.js" />
     <Content Include="Js\controllers\homeController.js" />
+    <Content Include="Js\controllers\paymentController.js" />
     <Content Include="Js\controllers\profileController.js" />
     <Content Include="Js\lib\grid.js" />
     <Content Include="Js\lib\ko.binders.js" />
@@ -172,10 +176,14 @@
     <Content Include="Views\Home\home.html" />
     <Content Include="Views\Templates\book-added.html" />
     <Content Include="Views\Templates\book-details.html" />
+    <Content Include="Views\Templates\cart-empty.html" />
     <Content Include="Views\Templates\cart-grid.html" />
     <Content Include="Views\Templates\error-404.html" />
     <Content Include="Views\Home\HtmlPage1.html" />
     <Content Include="Views\Templates\login.html" />
+    <Content Include="Views\Templates\pay-fail.html" />
+    <Content Include="Views\Templates\pay-success.html" />
+    <Content Include="Views\Templates\pay.html" />
     <Content Include="Views\Templates\register.html" />
     <Content Include="Views\Templates\search-no-results.html" />
     <Content Include="Views\Templates\empty.html" />
@@ -185,7 +193,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\BooksModule.cs" />
+    <Compile Include="Api\CartModule.cs" />
     <Compile Include="Api\ExampleSecureModule.cs" />
+    <Compile Include="Api\PaymentModule.cs" />
     <Compile Include="Api\SearchModule.cs" />
     <Compile Include="App_Start\NancyBootstrapper.cs" />
     <Compile Include="App_Start\OwinBootstrapper.cs" />
