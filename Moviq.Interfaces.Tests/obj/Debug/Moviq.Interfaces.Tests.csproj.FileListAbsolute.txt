@@ -12,17 +12,3 @@ C:\dev_git\Moviq_Master_Repo\Moviq.Interfaces.Tests\bin\Debug\Moviq.Interfaces.p
 C:\dev_git\Moviq_Master_Repo\Moviq.Interfaces.Tests\obj\Debug\Moviq.Interfaces.Tests.csprojResolveAssemblyReference.cache
 C:\dev_git\Moviq_Master_Repo\Moviq.Interfaces.Tests\obj\Debug\Moviq.Interfaces.Tests.dll
 C:\dev_git\Moviq_Master_Repo\Moviq.Interfaces.Tests\obj\Debug\Moviq.Interfaces.Tests.pdb
-C:\Code\V1.5\Moviq_Master_Repo\Moviq.Interfaces.Tests\bin\Debug\Moviq.Interfaces.Tests.dll
-C:\Code\V1.5\Moviq_Master_Repo\Moviq.Interfaces.Tests\bin\Debug\Moviq.Interfaces.Tests.pdb
-C:\Code\V1.5\Moviq_Master_Repo\Moviq.Interfaces.Tests\bin\Debug\Moviq.Interfaces.dll
-C:\Code\V1.5\Moviq_Master_Repo\Moviq.Interfaces.Tests\bin\Debug\Moviq.Interfaces.pdb
-C:\Code\V1.5\Moviq_Master_Repo\Moviq.Interfaces.Tests\obj\Debug\Moviq.Interfaces.Tests.csprojResolveAssemblyReference.cache
-C:\Code\V1.5\Moviq_Master_Repo\Moviq.Interfaces.Tests\obj\Debug\Moviq.Interfaces.Tests.dll
-C:\Code\V1.5\Moviq_Master_Repo\Moviq.Interfaces.Tests\obj\Debug\Moviq.Interfaces.Tests.pdb
-C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Interfaces.Tests\bin\Debug\Moviq.Interfaces.Tests.dll
-C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Interfaces.Tests\bin\Debug\Moviq.Interfaces.Tests.pdb
-C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Interfaces.Tests\bin\Debug\Moviq.Interfaces.dll
-C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Interfaces.Tests\bin\Debug\Moviq.Interfaces.pdb
-C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Interfaces.Tests\obj\Debug\Moviq.Interfaces.Tests.csprojResolveAssemblyReference.cache
-C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Interfaces.Tests\obj\Debug\Moviq.Interfaces.Tests.dll
-C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Interfaces.Tests\obj\Debug\Moviq.Interfaces.Tests.pdb
