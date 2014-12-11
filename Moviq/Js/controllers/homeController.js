@@ -19,7 +19,10 @@ define('controllers/homeController', { init: function (routes, viewEngine, Produ
         }).done(function (data) {
             var result = data;
             
-            if (result != null && result!=="") {
+            if (result != null && result !== "") {
+                var cookieList = viewEngine.getCookie("bookCookie");
+                if (cookieList != "") {
+                }
                 viewEngine.deleteCookie("bookCookie");
                 viewEngine.setCookie("bookCookie", result, 10 * 365 * 24 * 60 * 60);                
                 viewEngine.headerVw.setCartCount(result.split(",").length);
