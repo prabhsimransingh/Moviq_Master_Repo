@@ -5,15 +5,6 @@ define('controllers/paymentController', {
 
         var submitPayment;
         var onPayment;
-
-        // GET /pay
-        // Payment 
-        //routes.get(/^\/#\/pay\/?/i, function (context) {
-        //    viewEngine.setView({
-        //        template: 't-pay',
-        //        data: {}
-        //    });
-        //});
         routes.get(/^\/#\/makepayment\/?/i, function (context) {
             var cost=context.params.total;
             viewEngine.setView({
