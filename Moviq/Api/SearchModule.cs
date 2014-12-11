@@ -28,6 +28,7 @@
                     new Cart.ShoppingCart(
                         new Cart.AmountCalculator(),
                         new PaymentHandler(), new EmptyState(), cartItemServices);
+                    
                     cart.Add(product);
                 }
                 return null;

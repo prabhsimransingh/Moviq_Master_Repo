@@ -67,6 +67,7 @@ C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Newtonsoft.Json.
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Domain.Auth\obj\Debug\Moviq.Domain.Auth.csprojResolveAssemblyReference.cache
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Domain.Auth\obj\Debug\Moviq.Domain.Auth.dll
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Domain.Auth\obj\Debug\Moviq.Domain.Auth.pdb
+<<<<<<< HEAD
 C:\dev_git\NewestFork\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Moviq.Domain.Auth.dll
 C:\dev_git\NewestFork\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Moviq.Domain.Auth.pdb
 C:\dev_git\NewestFork\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Couchbase.dll
@@ -86,3 +87,22 @@ C:\dev_git\NewestFork\Moviq_Master_Repo\Moviq.Domain.Auth\obj\Debug\Moviq.Domain
 C:\dev_git\NewestFork\Moviq_Master_Repo\Moviq.Domain.Auth\obj\Debug\Moviq.Domain.Auth.pdb
 =======
 >>>>>>> develop
+=======
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Moviq.Domain.Auth.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Moviq.Domain.Auth.pdb
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Couchbase.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Enyim.Caching.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Moviq.Interfaces.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Nancy.Authentication.Forms.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Nancy.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Newtonsoft.Json.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Moviq.Interfaces.pdb
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Couchbase.xml
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Enyim.Caching.xml
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Nancy.xml
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Nancy.Authentication.Forms.xml
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\bin\Debug\Newtonsoft.Json.xml
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\obj\Debug\Moviq.Domain.Auth.csprojResolveAssemblyReference.cache
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\obj\Debug\Moviq.Domain.Auth.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Auth\obj\Debug\Moviq.Domain.Auth.pdb
+>>>>>>> develop_tarun

@@ -49,30 +49,31 @@ define('views/viewEngine', {
                 }
             };
 
+            self.setCartCount = function (count) {
+                self.cartCount(count);
+            };
             self.links.push({ text: 'BOOKS', href: 'books' });
             self.links.push({ text: 'MUSIC', href: 'music' });
             self.links.push({ text: 'MOVIES', href: 'movies' });
-            var cookieList = getCookie("bookCookie");
-            if (cookieList != "") {
-                var isExists = false;
-                var arrCookieList = cookieList.split(",");
-                for (var val in arrCookieList) {
-                    self.addToCart();
-                }
-            }
+            
             return self;
         };
 
         setView = function (viewModel) {
-            if (!viewModel) {
-                throw new Error('viewModel is undefined. The mainVw cannot be updated.');
+            var cookieEnabled = (navigator.cookieEnabled) ? true : false;
+            if (cookieEnabled) {
+                if (!viewModel) {
+                    throw new Error('viewModel is undefined. The mainVw cannot be updated.');
+                }
+
+                if (window.scroll) {
+                    window.scroll(0, 0);
+                }
+            } else {
+                viewModel = {
+                    template: 't-enable-cookie-grid'
+                }
             }
-
-            if (window.scroll) {
-                window.scroll(0, 0);
-            }
-
-
             $('.main').removeClass('in').addClass('out');
             setTimeout(function () {
                 mainVw.viewModel(viewModel);

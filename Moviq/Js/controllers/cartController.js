@@ -6,7 +6,9 @@ define('controllers/cartController', { init: function (routes, viewEngine, Produ
     var addToCart;
     var proceedToCart;
     var removeFromCart;
-    var makePayment;
+    var makePayment;    
+    var afterAddRedirect;
+    var emptyCart;
     // GET /#/cart/?q=searchterm
     // search for products
     routes.get(/^\/#\/addcart\/?/i, function (context) {
@@ -14,6 +16,9 @@ define('controllers/cartController', { init: function (routes, viewEngine, Produ
     });
     routes.get(/^\/#\/checkout/, function (context) {
         proceedToCart(context);
+    });
+    routes.get(/^\/#\/emptycart/, function (context) {
+        emptyCart(context);
     });
     routes.get(/^\/#\/remove\/?/i, function (context) {
         removeFromCart(context);
@@ -27,22 +32,34 @@ define('controllers/cartController', { init: function (routes, viewEngine, Produ
     addToCart = function (context) {
         var cookieList = viewEngine.getCookie("bookCookie");
         var isExists = false;
-        if (cookieList != "") {            
+        if (cookieList != "") {
             var arrCookieList = cookieList.split(",");
             for (var i = 0; i < arrCookieList.length; i++) {
                 if (arrCookieList[i] == context.params.bookid) {
                     isExists = true;
                 }
             }
-            if (!isExists) {
-                viewEngine.setCookie("bookCookie", cookieList + "," + context.params.bookid, 10 * 365 * 24 * 60 * 60);
-            }
-        }
-        else {
-            viewEngine.setCookie("bookCookie", context.params.bookid, 30);
-        }
-        return $.ajax({
-            url: '/api/books/' + context.params.bookid
+            if (isExists) {
+                afterAddRedirect(isExists, context.params.bookid);
+                return;                
+            } 
+        }       
+       $.ajax({
+           url: '/api/addToCart/?q=' + context.params.bookid,
+            method: 'GET'
+       }).done(function (data) {
+           if (cookieList != null) {
+               viewEngine.setCookie("bookCookie", cookieList + "," + context.params.bookid, 10 * 365 * 24 * 60 * 60);
+           } else {
+               viewEngine.setCookie("bookCookie", context.params.bookid, 30);
+           }
+           afterAddRedirect(false, context.params.bookid);
+        });           
+    };
+
+    afterAddRedirect = function (isExists,bookid) {
+        $.ajax({
+            url: '/api/books/' + bookid
         }).done(function (data) {
             var book = new Book(JSON.parse(data));
             if (!isExists) {
@@ -57,15 +74,13 @@ define('controllers/cartController', { init: function (routes, viewEngine, Produ
                     data: { book: book, message: "Item already added in the Cart" }
                 });
             }
-
         });
     };
 
-    proceedToCart = function (context) {
+    proceedToCart = function (context) {        
         var cookieList = viewEngine.getCookie("bookCookie");
         if (cookieList != "") {
             var arrCookieList = cookieList.split(",");
-
             var result = [];
             var results;
             var flag = true;
@@ -89,25 +104,42 @@ define('controllers/cartController', { init: function (routes, viewEngine, Produ
         }
     };
 
-    removeFromCart = function (context) {        
-        var cookieList = viewEngine.getCookie("bookCookie");
-        viewEngine.deleteCookie("bookCookie");
-        if (cookieList != "") {
-            var arrCookieList = cookieList.split(",");
-            var result="";
-            for (var i = 0; i < arrCookieList.length; i++) {
-                if (arrCookieList[i] != context.params.uid) {
-                    result = result + arrCookieList[i] + ",";
+    removeFromCart = function (context) {
+        alert("remove");
+        $.ajax({
+            url: '/api/removecart/' + context.params.uid,
+            method: 'GET'
+        }).done(function (data) {
+            var result = data;
+            var item = context.params.uid;
+            var cookieList = viewEngine.getCookie("bookCookie");
+            viewEngine.deleteCookie("bookCookie");
+            if (cookieList != "") {
+                var arrCookieList = cookieList.split(",");
+                var result = "";
+                for (var i = 0; i < arrCookieList.length; i++) {
+                    if (arrCookieList[i] != item) {
+                        result = result + arrCookieList[i] + ",";
+                    }
                 }
-            }            
-            result = result.substring(0, result.lastIndexOf(","));
-            viewEngine.headerVw.subtractFromCart();
-            viewEngine.setCookie("bookCookie", result, 10 * 365 * 24 * 60 * 60);
-            proceedToCart(context);
-        }        
+                result = result.substring(0, result.lastIndexOf(","));
+                viewEngine.headerVw.subtractFromCart();
+                viewEngine.setCookie("bookCookie", result, 10 * 365 * 24 * 60 * 60);
+                proceedToCart(context);
+            }           
+        });
+                
     };
-    makePayment = function (context) {      
-        
+    emptyCart = function (context) {
+        alert(1);
+        $.ajax({
+            url: '/api/emptycart/'+"remove",
+            method: 'GET'
+        }).done(function (data) {            
+            viewEngine.deleteCookie("bookCookie");
+            viewEngine.headerVw.setCartCount('');
+            proceedToCart(context);
+        });
     };
    return {
        addToCart: addToCart

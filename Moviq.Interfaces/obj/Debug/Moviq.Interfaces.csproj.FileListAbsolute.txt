@@ -11,3 +11,12 @@ C:\Code\V1.5\Moviq_Master_Repo\Moviq.Interfaces\bin\Debug\Moviq.Interfaces.dll
 C:\Code\V1.5\Moviq_Master_Repo\Moviq.Interfaces\bin\Debug\Moviq.Interfaces.pdb
 C:\Code\V1.5\Moviq_Master_Repo\Moviq.Interfaces\obj\Debug\Moviq.Interfaces.dll
 C:\Code\V1.5\Moviq_Master_Repo\Moviq.Interfaces\obj\Debug\Moviq.Interfaces.pdb
+C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Interfaces\bin\Debug\Moviq.Interfaces.dll
+C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Interfaces\bin\Debug\Moviq.Interfaces.pdb
+C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Interfaces\obj\Debug\Moviq.Interfaces.dll
+C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Interfaces\obj\Debug\Moviq.Interfaces.pdb
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Interfaces\bin\Debug\Moviq.Interfaces.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Interfaces\bin\Debug\Moviq.Interfaces.pdb
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Interfaces\obj\Debug\Moviq.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Interfaces\obj\Debug\Moviq.Interfaces.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Interfaces\obj\Debug\Moviq.Interfaces.pdb
