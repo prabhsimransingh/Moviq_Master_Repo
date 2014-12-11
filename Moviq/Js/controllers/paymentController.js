@@ -22,7 +22,8 @@ define('controllers/paymentController', {
             });
         });
 
-        routes.get(/^\/#\/stripe\/?/i, function (context) {           
+        routes.get(/^\/#\/stripe\/?/i, function (context) {
+ 
             $('.submit-button').attr("disabled", "disabled");
             Stripe.setPublishableKey('pk_test_RPfyHYbopF6CfB00Wj2IokwY');
          
@@ -34,11 +35,12 @@ define('controllers/paymentController', {
             }, function (status, response) {
                 if (response.error) {
                    //re-enable the submit button
-                    $('.submit-button').removeAttr("disabled")
+                    $('.submit-button').removeAttr("disabled");
+                    $('.gobackbutton').removeClass("hide");
+                    $('.submit-button').addClass("hide");
                     // show the error
-                    alert(response.error.message);
                     $(".payment-errors").html(response.error.message);
-                
+              
                 } else {
                     // token contains id, last4, and card type
                     var token = response['id'];
@@ -49,8 +51,7 @@ define('controllers/paymentController', {
             });
             
 
-            // adding the input field names is the last step, in case an earlier step errors
-            addInputNames();
+         
         });
 
         onPayment = function (token, totalcost) {
@@ -64,6 +65,13 @@ define('controllers/paymentController', {
                 var txnid = JSON.parse(JSON.parse(data).content).balance_transaction;
 
                 if (JSON.parse(JSON.parse(data).content).paid) {
+                    var cookie = viewEngine.getCookie("bookCookie");
+                    var books = cookie.split(",");
+                    for (var i = 0; i < books.length;i++){
+                        viewEngine.headerVw.subtractFromCart();
+                    }
+         
+                    viewEngine.deleteCookie("bookCookie");                    
                     viewEngine.setView({
                         template: 't-pay-success',
                         data: { payvalue: amountValue/100, transid: txnid }

@@ -138,6 +138,7 @@
     <Content Include="Js\controllers\booksController.js" />
     <Content Include="Js\controllers\cartController.js" />
     <Content Include="Js\controllers\homeController.js" />
+    <Content Include="Js\controllers\paymentController.js" />
     <Content Include="Js\controllers\profileController.js" />
     <Content Include="Js\lib\grid.js" />
     <Content Include="Js\lib\ko.binders.js" />
@@ -188,10 +189,14 @@
     <Content Include="Views\Home\home.html" />
     <Content Include="Views\Templates\book-added.html" />
     <Content Include="Views\Templates\book-details.html" />
+    <Content Include="Views\Templates\cart-empty.html" />
     <Content Include="Views\Templates\cart-grid.html" />
     <Content Include="Views\Templates\enable-cookie.html" />
     <Content Include="Views\Templates\error-404.html" />
     <Content Include="Views\Templates\login.html" />
+    <Content Include="Views\Templates\pay-fail.html" />
+    <Content Include="Views\Templates\pay-success.html" />
+    <Content Include="Views\Templates\pay.html" />
     <Content Include="Views\Templates\register.html" />
     <Content Include="Views\Templates\search-no-results.html" />
     <Content Include="Views\Templates\empty.html" />
