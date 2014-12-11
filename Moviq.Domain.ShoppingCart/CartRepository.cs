@@ -10,37 +10,36 @@ using System.Text;
 using System.Threading.Tasks;
 using Couchbase.Extensions;
 using Enyim.Caching.Memcached;
+using Moviq.Interfaces;
 
 
 namespace Moviq.Domain.Products
 {
    public class CartRepository : IRepository<ICartItem>, ICartRepository
     {
-      
+        string dataType;
+        string keyPattern;
+        ICouchbaseClient db;
+        ILocale locale;
+        string searchUrl;
 
          public CartRepository(ICouchbaseClient db, IFactory<ICartItem> userFactory, ILocale locale, string searchUrl) 
         {
             this.db = db;
             this.dataType = ((IHelpCategorizeNoSqlData)userFactory.GetInstance())._type;
-            this.keyPattern = String.Concat(this.dataType, "::{0}");
+            this.keyPattern = String.Concat(this.dataType, ":c:{0}");
             this.locale = locale;
             this.searchUrl = searchUrl;
-        }
-
-         string dataType;
-         string keyPattern;
-         ICouchbaseClient db;
-         ILocale locale;
-         string searchUrl;
+        }        
 
         public ICartItem GetByGuid(Guid guid)
          {
              return db.GetJson<CartItem>(String.Format(keyPattern, guid.ToString()));
          }
 
-        public IEnumerable<CartItem> GetByUserId(string userId)
+        public ICartItem GetByUserId(string cartId)
         {
-            return db.GetJson<IEnumerable<CartItem>>(String.Format(keyPattern, userId.ToString()));
+            return db.GetJson<CartItem>(String.Format(keyPattern, cartId.ToString()));            
         }
 
         public ICartItem Get(string guid)
@@ -69,15 +68,34 @@ namespace Moviq.Domain.Products
                 item.Guid = Guid.NewGuid();
             }
 
-            var mainKey = String.Format(keyPattern, item.Guid.ToString());
-            if (SetCart(item, mainKey))
+            var mainKey = String.Format(keyPattern, item.CartId.ToString());
+            bool cartExist = db.KeyExists(mainKey);
+            if (cartExist)
             {
-                return Get(item.Guid.ToString());
+                ICartItem itemOld = GetByUserId(item.CartId.ToString());
+                itemOld.Uid = itemOld.Uid + "," + item.Uid;
+                itemOld.Price = itemOld.Price + item.Price;
+                if (SetCart(itemOld, mainKey))
+                {
+                    return Get(itemOld.CartId.ToString());
+                }
+                else
+                {
+                    throw new Exception(locale.UserSetFailure);
+                }
             }
             else
             {
-                throw new Exception(locale.UserSetFailure);
+                if (SetCart(item, mainKey))
+                {
+                    return Get(item.CartId.ToString());
+                }
+                else
+                {
+                    throw new Exception(locale.UserSetFailure);
+                }
             }
+           
         }
 
 
@@ -87,8 +105,59 @@ namespace Moviq.Domain.Products
 
             //return db.StoreJson(StoreMode.Set, lookupByCartTitle, mainKey)
               return db.StoreJson(StoreMode.Set, mainKey, item);
+            
         }
-
+        public ICartItem Remove(ICartItem item)
+        {
+            var mainKey = String.Format(keyPattern, item.CartId.ToString());
+            bool cartExist = db.KeyExists(mainKey);
+            if (cartExist)
+            {
+                ICartItem itemOld = GetByUserId(item.CartId.ToString());
+                char[] charSeq = { ',' };
+                string[] array = itemOld.Uid.Split(charSeq);
+                string resultUid = "";
+                foreach(string str in array){
+                    if (!str.Equals(item.Uid))
+                        resultUid = resultUid + str + ",";                   
+                }
+                if (!resultUid.Equals("")) {
+                    resultUid = resultUid.Substring(0, resultUid.LastIndexOf(","));
+                    itemOld.Uid = resultUid;
+                    itemOld.Price = itemOld.Price - item.Price;
+                    if (SetCart(itemOld, mainKey))
+                    {
+                        return Get(itemOld.CartId.ToString());
+                    }
+                    else
+                    {
+                        throw new Exception(locale.UserSetFailure);
+                    }
+                }               
+            }
+            return null;
+        }
+        public ICartItem EmptyCart(string userId)
+        {
+            var mainKey = String.Format(keyPattern, userId.ToString());
+            bool cartExist = db.KeyExists(mainKey);
+            if (cartExist)
+            {
+                ICartItem itemOld = GetByUserId(userId);                  
+                    itemOld.Uid = "";
+                    itemOld.Price = 0;
+                    if (SetCart(itemOld, mainKey))
+                    {
+                        return Get(itemOld.CartId.ToString());
+                    }
+                    else
+                    {
+                        throw new Exception(locale.UserSetFailure);
+                    }
+                
+            }
+            return null;
+        }
         private bool SetUserId(IUser user, string mainKey)
         {
             var countKey = String.Format(keyPattern, "count");

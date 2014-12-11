@@ -1,4 +1,5 @@
-﻿using Moviq.Interfaces.Models;
+﻿
+using Moviq.Interfaces.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,8 @@ namespace Moviq.Domain.Products
     {
         ICartItem AddCartItem(ICartItem item);
         ICartItem UpdateCartItem(ICartItem item);
+        string GetCartItems();
+        ICartItem EmptyCart(string userId);
+
     }
 }

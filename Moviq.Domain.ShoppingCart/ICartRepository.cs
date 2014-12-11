@@ -12,6 +12,8 @@ namespace Moviq.Domain.Products
     {
       // List<ICartItem> GetByUserid(string userid);
        ICartItem GetByGuid(Guid guid);
-       IEnumerable<CartItem> GetByUserId(string userId);
+       ICartItem GetByUserId(string userId);
+       ICartItem Remove(ICartItem item);
+       ICartItem EmptyCart(string userId);
     }
 }

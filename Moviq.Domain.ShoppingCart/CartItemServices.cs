@@ -1,4 +1,5 @@
-﻿using Moviq.Interfaces.Models;
+﻿using Moviq.Interfaces;
+using Moviq.Interfaces.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,20 +23,27 @@ namespace Moviq.Domain.Products
         }
         public ICartItem UpdateCartItem(ICartItem item)
         {
-           var result = cartRepo.GetByGuid(item.Guid);
-           result.AddedFlag = true;
-           return cartRepo.Set(item);
+           return cartRepo.Remove(item);
        }
 
-       public bool EmptyCart(string userId)
+       public ICartItem EmptyCart(string userId)
         {
-           var result = cartRepo.GetByUserId(userId);
-           foreach(CartItem record in result)
-           {
-            record.AddedFlag = true;
-            cartRepo.Set(record);
-           }
-            return true;
+            return cartRepo.EmptyCart(userId);
         }
+
+       public string GetCartItems()
+       {
+           if (AmbientContext.CurrentClaimsPrinciple != null)
+           {
+               ICustomClaimsIdentity currentUser = AmbientContext.CurrentClaimsPrinciple.ClaimsIdentity;
+               string userId = currentUser.GetAttribute(AmbientContext.UserPrincipalGuidAttributeKey).ToString();
+               var result = cartRepo.GetByUserId(userId);
+               if (result != null)
+                   return result.Uid;
+               else
+                   return null;
+           }
+           return null;
+       }
     }
 }

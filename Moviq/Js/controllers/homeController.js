@@ -12,30 +12,35 @@ define('controllers/homeController', { init: function (routes, viewEngine, Produ
         onSearch(context);
     });    
     
-    routes.get('/', function (context) {
-        viewEngine.setView({
-            template: 't-empty',
-            message: 'hello word!'
+    routes.get('/', function (context) {        
+        $.ajax({
+            url: '/api/getcart/'+"get",
+            method: 'GET'
+        }).done(function (data) {
+            var result = data;
+            
+            if (result != null && result!=="") {
+                viewEngine.deleteCookie("bookCookie");
+                viewEngine.setCookie("bookCookie", result, 10 * 365 * 24 * 60 * 60);                
+                viewEngine.headerVw.setCartCount(result.split(",").length);
+            } else {
+                var cookieList = viewEngine.getCookie("bookCookie");
+                if (cookieList != "") {                    
+                    var arrCookieList = cookieList.split(",");
+                    viewEngine.headerVw.setCartCount(arrCookieList.length);
+                }
+            }
+            viewEngine.setView({
+                template: 't-empty',
+                message: 'hello word!'
+            });
         });
+        
     });
 
     
-    routes.get(/^\/#\/addToCart\/?/i, function (context) {
-        //alert(2);
-        addToCart(context);
-    });
-
-    addToCart = function (context) {
-        return $.ajax({
-            url: '/api/addToCart/?q=' + context.params.id,
-            method: 'GET'
-        }).done(function (data) {
-           // alert("coming up");
-        });
-    };
-
-
     onSearch = function (context) {
+        
         return $.ajax({
             url: '/api/search/?q=' + context.params.q,
             method: 'GET'

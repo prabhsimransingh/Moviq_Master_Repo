@@ -34,3 +34,12 @@ C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Locale\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Locale\obj\Debug\Moviq.Locale.csprojResolveAssemblyReference.cache
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Locale\obj\Debug\Moviq.Locale.dll
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Locale\obj\Debug\Moviq.Locale.pdb
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Locale\bin\Debug\Moviq.Locale.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Locale\bin\Debug\Moviq.Locale.pdb
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Locale\bin\Debug\Moviq.Interfaces.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Locale\bin\Debug\Newtonsoft.Json.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Locale\bin\Debug\Moviq.Interfaces.pdb
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Locale\bin\Debug\Newtonsoft.Json.xml
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Locale\obj\Debug\Moviq.Locale.csprojResolveAssemblyReference.cache
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Locale\obj\Debug\Moviq.Locale.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Locale\obj\Debug\Moviq.Locale.pdb

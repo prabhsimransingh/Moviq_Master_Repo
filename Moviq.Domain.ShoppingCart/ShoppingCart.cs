@@ -18,6 +18,11 @@ namespace Cart
         public string cartId;
 
         public ICartState CartState { get; set; }
+
+        private ShoppingCart() {
+            ICustomClaimsIdentity currentUser = AmbientContext.CurrentClaimsPrinciple.ClaimsIdentity;
+            cartId = currentUser.GetAttribute(AmbientContext.UserPrincipalGuidAttributeKey).ToString();     
+        }
         public ShoppingCart(IAmountCalculator amountCalculator, IPaymentHandler paymentHandler, ICartState cartState, ICartItemServices CartItemServices)
         {
             ICustomClaimsIdentity currentUser = AmbientContext.CurrentClaimsPrinciple.ClaimsIdentity;
@@ -30,15 +35,16 @@ namespace Cart
           
         }
 
-        public void Add(Product cartItem)
+        public void Add(Product product)
         {
-            CartState.AddItem(this, cartItem);
+            CartState.AddItem(this, product);    
         }
 
-
-        public void Remove(Product cartItem)
+        public void Remove(Product product)
         {
-            CartState.RemoveItem(this, cartItem);
+
+            //ShoppingCart cartItem = new ShoppingCart();
+            CartState.RemoveItem(this, product);
         }
 
         public void Pay()
@@ -46,9 +52,9 @@ namespace Cart
             CartState.Pay(this, _amountCalculator, _paymentHandler);
         }
 
-        public void EmptyCart(ShoppingCart cart)
+        public void EmptyCart()
         {
-            CartState.EmptyCart(cart);
+            CartState.EmptyCart(this);
         }
     }
 
@@ -75,26 +81,24 @@ namespace Cart
             cart.CartState = new ActiveState();
         }
 
-        public void RemoveItem(ShoppingCart cart, Product item)
+       public void RemoveItem(ShoppingCart cart, Product item)
         {
-            //throw an error
+
         }
 
-        public bool Pay(ShoppingCart cart, IAmountCalculator amountCalculator, IPaymentHandler paymentHandler)
-        {
-            return false;
-            //throw an error
-        }
+       public bool Pay(ShoppingCart cart, IAmountCalculator amountCalculator, IPaymentHandler paymentHandler)
+       {
+           return false;
+       }
+       public void EmptyCart(ShoppingCart cart)
+       {
 
-        public void EmptyCart(ShoppingCart cart)
-        {
-            //throw error
-        }
+       }
     }
 
     public class ActiveState : ICartState
     {
-        CartItem CartItem = new CartItem();
+       static CartItem CartItem = new CartItem();
 
         public void AddItem(ShoppingCart cart, Product item)
         {
@@ -115,16 +119,14 @@ namespace Cart
             cart.CartState = new ActiveState();
         }
 
-        public bool Pay(ShoppingCart cart, IAmountCalculator amountCalculator, IPaymentHandler paymentHandler)
-        {
-           // decimal amountToPay = amountCalculator.CaluculatePaymentAmount(cart.CartItems);
-           // bool paymentStatus = paymentHandler.Pay(amountToPay);
-            //cart.CartState = new PaidState();
-            return false;
-        }
         public void EmptyCart(ShoppingCart cart)
         {
-            cart.CartItem.UpdateCartItem(CartItem);
+            cart.CartItem.EmptyCart(cart.cartId);
+        }
+
+        public bool Pay(ShoppingCart cart, IAmountCalculator amountCalculator, IPaymentHandler paymentHandler)
+        {
+            return false;
         }
     }
 
