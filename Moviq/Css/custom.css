@@ -71,4 +71,9 @@
     padding: 0;
     text-align: left;
 }
-
+.continue-shopping {
+    margin-right: 350px;
+}
+.empty-cart-btn{
+    padding-top: 20px;
+}
