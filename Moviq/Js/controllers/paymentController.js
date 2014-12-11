@@ -14,12 +14,23 @@ define('controllers/paymentController', {
         //        data: {}
         //    });
         //});
-        routes.get(/^\/#\/makepayment\/?/i, function (context) {
-            var cost = context.params.total;
-            viewEngine.setView({
-                template: 't-pay',
-                data: { totalcost: cost }
-            });
+        routes.get(/^\/#\/makepayment\/?/i, function (context) {            
+            $.ajax({
+                url: '/api/getcart/' + "get",
+                method: 'GET'
+            }).done(function (data) {                
+                if (data == null || data === "") {
+                    viewEngine.setView({
+                        template: 't-login'
+                    });
+                } else {
+                    var cost = context.params.total;
+                    viewEngine.setView({
+                        template: 't-pay',
+                        data: { totalcost: cost }
+                    });
+                }
+            });            
         });
 
         routes.get(/^\/#\/stripe\/?/i, function (context) {

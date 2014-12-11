@@ -104,8 +104,7 @@ define('controllers/cartController', { init: function (routes, viewEngine, Produ
         }
     };
 
-    removeFromCart = function (context) {
-        alert("remove");
+    removeFromCart = function (context) {        
         $.ajax({
             url: '/api/removecart/' + context.params.uid,
             method: 'GET'

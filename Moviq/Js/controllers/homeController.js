@@ -21,11 +21,28 @@ define('controllers/homeController', { init: function (routes, viewEngine, Produ
             
             if (result != null && result !== "") {
                 var cookieList = viewEngine.getCookie("bookCookie");
-                if (cookieList != "") {
-                }
-                viewEngine.deleteCookie("bookCookie");
-                viewEngine.setCookie("bookCookie", result, 10 * 365 * 24 * 60 * 60);                
-                viewEngine.headerVw.setCartCount(result.split(",").length);
+                if (cookieList != "" && cookieList !== "") {
+                    $.ajax({
+                        url: '/api/emptycart/' + "remove",
+                        method: 'GET'
+                    }).done(function (data) {
+                        var arrCookieList = cookieList.split(",");
+                        for (var i = 0; i < arrCookieList.length; i++) {
+                            $.ajax({
+                                url: '/api/addToCart/?q=' + arrCookieList[i],
+                                method: 'GET',
+                                async: false
+                            }).done(function (data) {
+
+                            });
+                        }
+                        viewEngine.headerVw.setCartCount(arrCookieList.length);
+                    });
+                } else {
+                    viewEngine.deleteCookie("bookCookie");
+                    viewEngine.setCookie("bookCookie", result, 10 * 365 * 24 * 60 * 60);
+                    viewEngine.headerVw.setCartCount(result.split(",").length);
+                }                
             } else {
                 var cookieList = viewEngine.getCookie("bookCookie");
                 if (cookieList != "") {                    
