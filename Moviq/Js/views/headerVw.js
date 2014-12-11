@@ -14,10 +14,11 @@ define('views/headerVw', {
             routes.navigate('/search/?q=' + $(inputSelector).val());
             return false;
         });
-        $(document).on('click', '.submit-button', function (event) {
-          
 
-            
+        $(document).on('click', '.submit-button', function (event) {
+
+
+
             $(".payform").validate({
                 rules: {
                     "username": {
@@ -39,10 +40,9 @@ define('views/headerVw', {
                     "card-expiry-year": "cardExpiry" // we don't validate month separately
                 }
             });
-            if (!$(".payform").valid())
-            {
+            if (!$(".payform").valid()) {
                 return false;
-            }      
+            }
             routes.navigate('/stripe/?totalcost=' + document.getElementById("totalcost").innerHTML);
             return false;
         });

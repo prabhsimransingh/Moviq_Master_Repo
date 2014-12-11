@@ -73,7 +73,10 @@ namespace Moviq.Domain.Products
             if (cartExist)
             {
                 ICartItem itemOld = GetByUserId(item.CartId.ToString());
-                itemOld.Uid = itemOld.Uid + "," + item.Uid;
+                if(itemOld.Uid.Equals(""))
+                    itemOld.Uid = item.Uid;
+                else
+                    itemOld.Uid = itemOld.Uid + "," + item.Uid;
                 itemOld.Price = itemOld.Price + item.Price;
                 if (SetCart(itemOld, mainKey))
                 {

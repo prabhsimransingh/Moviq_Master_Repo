@@ -7,6 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js"></script>
+    <!--<script>
+        $(document).ready(function () {
+            alert("a");
+            function addInputNames() {
+                // Not ideal, but jQuery's validate plugin requires fields to have names
+                // so we add them at the last possible minute, in case any javascript
+                // exceptions have caused other parts of the script to fail.
+                $(".card-number").attr("name", "card-number")
+                $(".card-cvc").attr("name", "card-cvc")
+                $(".card-expiry-year").attr("name", "card-expiry-year")
+            }
+
+            function removeInputNames() {
+                $(".card-number").removeAttr("name")
+                $(".card-cvc").removeAttr("name")
+                $(".card-expiry-year").removeAttr("name")
+            }
+
+            // add custom rules for credit card validating
+            jQuery.validator.addMethod("cardNumber", Stripe.validateCardNumber, "Please enter a valid card number");
+            jQuery.validator.addMethod("cardCVC", Stripe.validateCVC, "Please enter a valid security code");
+            jQuery.validator.addMethod("cardExpiry", function () {
+                return Stripe.validateExpiry($(".card-expiry-month").val(),
+                                             $(".card-expiry-year").val())
+            }, "Please enter a valid expiration");
+
+            // We use the jQuery validate plugin to validate required params on submit
+            $(".submit-button").validate({
+                clickHandler: click,
+                rules: {
+                    "card-cvc": {
+                        cardCVC: true,
+                        required: true
+                    },
+                    "card-number": {
+                        cardNumber: true,
+                        required: true
+                    },
+                    "card-expiry-year": "cardExpiry" // we don't validate month separately
+                }
+            });
+            // adding the input field names is the last step, in case an earlier step errors
+            addInputNames();
+        });
+    </script>-->
     <title>Moviq</title>
     <!--    <link rel="shortcut icon" href="../favicon.ico">-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
