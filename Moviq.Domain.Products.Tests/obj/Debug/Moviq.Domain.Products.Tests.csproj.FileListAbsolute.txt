@@ -136,6 +136,7 @@ C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Domain.Products.Tests\obj\Debug\Moviq.
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Domain.Products.Tests\obj\Debug\Moviq.Domain.Products.Tests.pdb
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Domain.Products.Tests\bin\Debug\Moviq.Domain.ShoppingCart.dll
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq.Domain.Products.Tests\bin\Debug\Moviq.Domain.ShoppingCart.pdb
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Products.Tests\obj\Debug\Moviq.Domain.Products.Tests.csprojResolveAssemblyReference.cache
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Products.Tests\bin\Debug\Moviq.Domain.Products.Tests.dll.config
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Products.Tests\bin\Debug\Moviq.Domain.Products.Tests.dll
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Products.Tests\bin\Debug\Moviq.Domain.Products.Tests.pdb
@@ -169,6 +170,5 @@ C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Products.Tests\b
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Products.Tests\bin\Debug\Ploeh.AutoFixture.xml
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Products.Tests\bin\Debug\Ploeh.AutoFixture.AutoMoq.xml
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Products.Tests\bin\Debug\RestSharp.xml
-C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Products.Tests\obj\Debug\Moviq.Domain.Products.Tests.csprojResolveAssemblyReference.cache
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Products.Tests\obj\Debug\Moviq.Domain.Products.Tests.dll
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq.Domain.Products.Tests\obj\Debug\Moviq.Domain.Products.Tests.pdb

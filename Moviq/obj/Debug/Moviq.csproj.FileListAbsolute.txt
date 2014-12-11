@@ -200,6 +200,7 @@ C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq\bin\FluentAssertions.Core.xml
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq\bin\Moq.xml
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq\obj\Debug\Moviq.dll
 C:\Users\Vaibhavi\Moviq_Master_Repo\Moviq\obj\Debug\Moviq.pdb
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\obj\Debug\Moviq.csprojResolveAssemblyReference.cache
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Moviq.dll.config
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Moviq.dll
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Moviq.pdb
@@ -220,6 +221,9 @@ C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Nancy.Owin.dll
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Newtonsoft.Json.dll
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Owin.dll
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\RestSharp.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\System.Net.Http.Formatting.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\System.Web.Http.dll
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\System.Web.Http.WebHost.dll
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Grain.dll
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Ploeh.AutoFixture.dll
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Ploeh.AutoFixture.AutoMoq.dll
@@ -241,6 +245,9 @@ C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Nancy.Authenticatio
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Nancy.Owin.xml
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Newtonsoft.Json.xml
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\RestSharp.xml
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\System.Net.Http.Formatting.xml
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\System.Web.Http.xml
+C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\System.Web.Http.WebHost.xml
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Grain.xml
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Ploeh.AutoFixture.xml
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Ploeh.AutoFixture.AutoMoq.xml
@@ -249,12 +256,5 @@ C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\FluentAssertions.xm
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\FluentAssertions.Core.pdb
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\FluentAssertions.Core.xml
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\Moq.xml
-C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\obj\Debug\Moviq.csprojResolveAssemblyReference.cache
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\obj\Debug\Moviq.dll
 C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\obj\Debug\Moviq.pdb
-C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\System.Net.Http.Formatting.dll
-C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\System.Web.Http.dll
-C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\System.Web.Http.WebHost.dll
-C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\System.Net.Http.Formatting.xml
-C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\System.Web.Http.xml
-C:\Users\tmitra\Documents\GitHub\Moviq_Master_Repo\Moviq\bin\System.Web.Http.WebHost.xml
